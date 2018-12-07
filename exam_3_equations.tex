@@ -1,0 +1,356 @@
+\documentclass[12pt]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{caption}
+
+\usepackage[left=0.4in,right=0.4in,top=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{bigints}
+
+\newcommand{\class}{ECE 1259 - Electromagnetics}
+\newcommand{\term}{Fall 2018}
+\newcommand{\examnum}{Exam 1 Equation Sheet}
+\newcommand{\examdate}{9/18/18}
+
+\pagestyle{head}
+\firstpageheader{}{}{}
+
+\usepackage[compact]{titlesec}
+\titlespacing{\section}{0pt}{*0}{*0}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}
+\setlength{\headsep}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\topmargin}{0pt}
+\setlength{\topsep}{0pt}
+\setlength{\partopsep}{0pt}
+
+\begin{document}
+\begin{multicols}{2}
+
+
+\noindent
+\textbf{ECE 1259 - Electromagnetics} \\
+\textbf{Fall 2018} \\
+\text{} \\
+
+\begin{flushleft}
+\huge
+\textbf{Vector Calculus}
+\normalsize
+\vspace{0.25in}
+\subsection*{Vector Algebra}
+	$\mathbf{a_A} = \dfrac{\mathbf{A}}{|\mathbf{A}|}$\\
+	\vspace{0.1in}
+	$|\mathbf{A}| = \sqrt{\mathbf{A \cdot A}}$
+		\vspace{0.1in}
+	\begin{flalign*}
+		\mathbf{A} \pm \mathbf{B} &= (A_x \pm B_x)\mathbf{a_x} \pm(A_y \pm B_y)\mathbf{a_y} &&\\
+		&\pm(A_z \pm B_z)\mathbf{a_z}&&
+	\end{flalign*}
+	\begin{flalign*}
+		\mathbf{A\cdot B} &= A_xB_x+A_yB_y+A_zB_z &&\\
+		&=AB\cos\theta &&
+	\end{flalign*}
+	\begin{flalign*}
+		\mathbf{A}\times\mathbf{B} &=
+		\begin{vmatrix}
+			\mathbf{a_x} & \mathbf{a_y} & \mathbf{a_z} \\
+			A_x 		 & A_y 			& A_z			\\
+			B_x 		 & B_y 			& B_z
+		\end{vmatrix}&& \\
+		&=(A_yB_z-A_zB_y)\mathbf{a_x}+(A_zB_x-A_xB_z)\mathbf{a_y}&& \\
+		&+(A_xB_y-A_yB_x)\mathbf{a_x}&& \\
+		&= (AB\sin\theta)\mathbf{a_n}
+	\end{flalign*}
+	$proj_\mathbf{B}\mathbf{A} = \dfrac{\mathbf{A\cdot B}}{|\mathbf{B}|}$\\
+	\bigskip
+	
+\subsection*{Coordinate Systems} \bigskip
+	\subsubsection*{Cartesian $\Leftrightarrow$ Cylindrical}
+			\vspace{0.1in}
+		\begin{tabular}{c c c}
+			$x=\rho\cos\phi$ & $y=\rho\sin\theta$ & $z=z$
+		\end{tabular} \\
+		\vspace{0.1in}
+		$\mathbf{a_x} = \cos\phi\mathbf{a_\rho}-\sin\phi\mathbf{a_\phi}$ \\ 		\vspace{0.1in}
+		$\mathbf{a_y} = \sin\phi\mathbf{a_\rho}+\cos\phi\mathbf{a_\phi}$ \\		\vspace{0.1in}
+		$\mathbf{a_z} = \mathbf{a_z}$ \\
+		\bigskip
+		\begin{tabular}{c c c}
+			$\rho=\sqrt{x^2+y^2}$ & $\sin\phi=\dfrac{y}{\sqrt{x^2+y^2}}$ & $z=z$ \\
+			& $\cos\phi=\dfrac{x}{\sqrt{x^2+y^2}}$ & \\
+			& $\tan\phi=\dfrac{y}{x}$ &
+		\end{tabular} 		\vspace{0.1in}
+		$\mathbf{a_\rho} = \cos\phi\mathbf{a_x}+\sin\phi\mathbf{a_y}$ \\ 		\vspace{0.1in}
+		$\mathbf{a_\phi} = -\sin\phi\mathbf{a_x}+\cos\phi\mathbf{a_y}$ \\ 		\vspace{0.1in}
+		$\mathbf{a_z} = \mathbf{a_z}$ \\ 		\vspace{0.1in}
+	
+	\subsubsection*{Cartesian $\Leftrightarrow$ Spherical} 		\vspace{0.1in}
+		\begin{tabular}{c c c}
+			$x=r\sin\theta\cos\phi$ & $y=r\sin\theta\sin\theta$ & $z=r\cos\theta$
+		\end{tabular} \\ 		\vspace{0.1in}
+		$\mathbf{a_x} = \sin\theta\cos\phi\mathbf{a_r}+\cos\theta\cos\phi\mathbf{a_\theta}-\sin\theta\mathbf{a_\phi}$ \\ 		\vspace{0.1in}
+		$\mathbf{a_y} = \sin\theta\sin\phi\mathbf{a_r}+\cos\theta\sin\phi\mathbf{a_\theta}+\cos\phi\mathbf{a_\phi}$ \\ 		\vspace{0.1in}
+		$\mathbf{a_z} = \cos\theta\mathbf{a_r}-\sin\theta\mathbf{a_\theta}$ \\ 		\vspace{0.1in}
+		
+		\begin{tabular}{c c}
+			$r=\sqrt{x^2+y^2+z^2}$ & \\ 		\vspace{0.1in}
+			$\sin\theta=\dfrac{\sqrt{x^2+y^2}}{\sqrt{x^2+y^2+z^2}}$ & $\sin\phi=\dfrac{y}{\sqrt{x^2+y^2}}$\\ 		\vspace{0.1in}
+			$\cos\theta=\dfrac{z}{\sqrt{x^2+y^2+z^2}}$ & $\cos\phi=\dfrac{x}{\sqrt{x^2+y^2}}$ \\ 		\vspace{0.1in}
+			$\tan\theta=\dfrac{\sqrt{x^2+y^2}}{z}$ & $\tan\phi=\dfrac{y}{x}$
+		\end{tabular} \\ 		\vspace{0.1in}
+		$\mathbf{a_r} = \sin\theta\cos\phi\mathbf{a_x}+\sin\theta\sin\phi\mathbf{a_y}+\cos\theta\mathbf{a_z}$ \\ 		\vspace{0.1in}
+		$\mathbf{a_\theta} = \cos\theta\cos\phi\mathbf{a_x}+\cos\theta\sin\phi\mathbf{a_y}-\sin\phi\mathbf{a_z}$ \\ 		\vspace{0.1in}
+		$\mathbf{a_\phi} = -\sin\phi\mathbf{a_x}+\cos\phi\mathbf{a_y}$ \\
+		\hfill \break 		\vspace{0.1in}
+	\subsubsection*{Cylindrical $\Leftrightarrow$ Spherical} 		\vspace{0.1in}
+		\begin{tabular}{c c c}
+			$\rho=r\sin\theta$ & $\phi=\phi$ & $z=r\sin\theta$
+		\end{tabular} \\ 		\vspace{0.1in}
+		$\mathbf{a_\rho} = \sin\theta\mathbf{a_r}+\cos\theta\mathbf{a_\theta}$ \\ 		\vspace{0.1in}
+		$\mathbf{a_\phi} = \mathbf{a_\phi}$ \\ 		\vspace{0.1in}
+		$\mathbf{a_z} = \cos\theta\mathbf{a_r}-\sin\theta\mathbf{a_\theta}$ \\ 		\vspace{0.1in}
+		\begin{tabular}{c c c}
+			$r=\sqrt{\rho^2+z^2}$ & $\sin\theta=\dfrac{\rho}{r}$ & $\phi=\phi$ \\
+			& $\cos\theta=\dfrac{z}{r}$ & \\
+			& $\tan\theta=\dfrac{\rho}{z}$ &
+		\end{tabular} 	 \\	\vspace{0.1in}
+		$\mathbf{a_r} = \sin\theta\mathbf{a_\rho}+\cos\theta\mathbf{a_z}$ \\ 		\vspace{0.1in}
+		$\mathbf{a_\theta} =\cos\theta\mathbf{a_\rho}-\sin\theta\mathbf{a_z}$ \\ 		\vspace{0.1in}
+		$\mathbf{a_\phi} = \mathbf{a_\phi} $\\ 		\vspace{0.1in}
+		\hfill \break
+
+\subsection*{Differential Length, Surface, Volume}
+	\begin{flalign*}
+			d\mathbf{L} =& dx\mathbf{a_x}+dy\mathbf{a_y}+dz\mathbf{a_z} && \\
+			=& d\rho\mathbf{a_\rho}+\rho d\phi\mathbf{a_\phi}+dz\mathbf{a_z} && \\
+			=& dr\mathbf{a_r}+rd\theta\mathbf{a_\theta}+r\sin\theta\mathbf{a_\phi} && \\
+			d\mathbf{S} =& \text{ multiply scalar components of } d\mathbf{L} && \\
+			& \text{ tangential to }d\mathbf{S} \text{ with the unit vector} && \\
+			& \text{ normal to it} && \\
+			dV =& dxdydz && \\
+			=& \rho d\rho d\phi dz && \\
+			=& r^2\sin\theta dr d\theta d\phi && \\
+	\end{flalign*}
+
+\subsection*{Unit Vector Derivatives} \bigskip
+	\textbf{Cartesian Coordinates} \\
+		\text{Derivative of any unit vector with respect}\\
+		\text{to any cartesian variable is 0.}\\ \bigskip
+	\textbf{Cylindrical Coordinates}\\
+		$\dfrac{\partial\mathbf{a_\rho}}{\partial\phi} = \mathbf{a_\phi}, \dfrac{\partial\mathbf{a_\phi}}{\partial\phi} = -\mathbf{a_\rho},$ \text{ 0 otherwise} \\ \bigskip
+	\textbf{Spherical Coordinates}\\
+		$\dfrac{\partial\mathbf{a_r}}{\partial\theta} = \mathbf{a_\theta}, \dfrac{\partial\mathbf{a_\theta}}{\partial\theta} = -\mathbf{a_r},\dfrac{\partial\mathbf{a_r}}{\partial\phi} = \sin\theta\mathbf{a_\phi}$ \\ $\dfrac{\partial\mathbf{a_\theta}}{\partial\phi} = \cos\theta\mathbf{a_\phi}\dfrac{\partial\mathbf{a_\phi}}{\partial\phi} = -(\sin\theta\mathbf{a_r}+\cos\theta\mathbf{a_\theta}),$\\
+		\text{0 otherwise} \bigskip
+
+\subsection*{Del Operator ($\nabla$) Applications} \bigskip
+	\subsubsection*{Gradient:}
+	\begin{flalign*}
+		\nabla V =& \dfrac{\partial V}{\partial x}\mathbf{a_x}+\dfrac{\partial V}{\partial y}\mathbf{a_y}+\dfrac{\partial V}{\partial z}\mathbf{a_z} &&\\
+		=& \dfrac{\partial V}{\partial \rho}\mathbf{a_\rho}+\dfrac{\partial V}{\rho\partial \phi}\mathbf{a_\phi}+\dfrac{\partial V}{\partial z}\mathbf{a_z} &&\\
+		=&\dfrac{\partial V}{\partial r}\mathbf{a_r}+\dfrac{\partial V}{r\partial \theta}\mathbf{a_\theta}+\dfrac{\partial V}{r\sin\theta\partial \phi}\mathbf{a_\phi} 
+	\end{flalign*}
+	\subsubsection*{Divergence:}
+	\begin{flalign*}
+		\nabla\cdot\mathbf{A} =& \dfrac{\partial A_x}{\partial x}+\dfrac{\partial A_y}{\partial y}+\dfrac{\partial A_z}{\partial z} &&\\
+		=& \dfrac{1}{\rho}\dfrac{\partial}{\partial \rho}(\rho A_\rho)+\dfrac{1}{\rho}\dfrac{\partial A_\phi}{\partial \phi}+\dfrac{\partial A_z}{\partial z} &&\\
+		=&\dfrac{1}{r^2}\dfrac{\partial}{\partial r}(r^2A_r)+\dfrac{1}{r\sin\theta}\dfrac{\partial}{\partial \theta}(\sin\theta A_\theta)&& \\
+		&+\dfrac{1}{r\sin\theta}\dfrac{\partial A_\phi}{\partial \phi}
+	\end{flalign*}
+	\subsubsection*{Laplacian:}
+	\begin{flalign*}
+	\nabla^2V =& \dfrac{\partial^2V}{\partial x^2}
+								+\dfrac{\partial^2V}{\partial y^2}
+								+\dfrac{\partial^2V}{\partial z^2} &&\\
+	=& \dfrac{1}{\rho}\dfrac{\partial}{\partial\rho}(\rho\dfrac{\partial V}{\partial\rho})
+			+\dfrac{1}{\rho^2}\dfrac{\partial^2V}{\partial\phi^2}
+			+\dfrac{\partial^2V}{\partial z^2}&&\\
+	=& \dfrac{1}{r^2}\dfrac{\partial}{\partial r}(r^2\dfrac{\partial V}{\partial r})
+			+\dfrac{1}{r^2\sin\theta}\dfrac{\partial}{\partial\theta}(\sin\theta\dfrac{\partial V}{\partial \theta}) &&\\
+	&+\dfrac{1}{r^2\sin^2\theta}\dfrac{\partial^2V}{\partial \phi^2}
+	\end{flalign*}
+	
+	\subsubsection*{Curl:}
+	\begin{flalign*}
+		\nabla\times\mathbf{A} =& \begin{vmatrix}
+			\mathbf{a_x} & \mathbf{a_y} & \mathbf{a_z} \\
+			\dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} & \dfrac{\partial}{\partial z}\\
+			A_x 		 & A_y 			& A_z
+			\end{vmatrix}&& \\
+		=& \dfrac{1}{\rho}\begin{vmatrix}
+			\mathbf{a_\rho} & \rho\mathbf{a_\phi} & \mathbf{a_z} \\
+			\dfrac{\partial}{\partial\rho} & \dfrac{\partial}{\partial\phi} & \dfrac{\partial}{\partial z}\\
+			A_\rho 		 & \rho A_\phi			& A_z
+			\end{vmatrix}&& \\
+		=& \dfrac{1}{r^2\sin\theta}\begin{vmatrix}
+			\mathbf{a_r} & r\mathbf{a_\theta} & r\sin\theta\mathbf{a_\phi} \\
+			\dfrac{\partial}{\partial r} & \dfrac{\partial}{\partial\theta} & \dfrac{\partial}{\partial\phi}\\
+			A_r			 & r A_\theta			& r\sin\theta A_\phi
+			\end{vmatrix}&& \\
+	\end{flalign*}
+	
+	\newpage
+	\huge
+	\textbf{Electrostatics}
+	\normalsize
+	\vspace{0.2in}
+	\subsection*{Constants}
+	{ \addtolength{\leftskip}{0.5in}
+		$ \epsilon_0 = 8.854*10^{-12} F/m$ \\
+	}
+	
+	\subsection*{Electric Field Intensity}
+	\subsubsection*{Coulomb's Law}
+	{ \addtolength{\leftskip}{0.5in}
+		$\mathbf{F_{12}} = \dfrac{Q_1Q_2}{4\pi\epsilon R_{12}^2}\mathbf{a_{12}}$ \\[4pt]
+		$\mathbf{E_1} = \dfrac{\mathbf{F_{12}}}{Q_2} = \dfrac{Q_1}{4\pi\epsilon R^2}\mathbf{a_{R}}$ \\
+	}
+	
+	\subsubsection*{Charge Distributions}
+	{ \addtolength{\leftskip}{0.5in}
+		Continuous Distribution:\quad $E=\int\dfrac{dQ}{4\pi\epsilon R^2}\mathbf{a_R}$\\[4pt]
+		Point Charge at Origin:\quad $E=\dfrac{Q}{4\pi\epsilon r^2}\mathbf{a_r} $\\[4pt]
+		Line of Charge on Z-Axis:\quad $E=\dfrac{\rho_L}{2\pi\epsilon\rho}\mathbf{a_\rho}$\\[4pt]
+		Infinite Sheet of Charge:\quad $E=\dfrac{\rho_s}{2\epsilon}\mathbf{a_N}$\\
+	}
+	
+	\subsection*{Electric Flux Density}
+	{ \addtolength{\leftskip}{0.5in}
+		$\mathbf{D} = \epsilon\mathbf{E} = \epsilon_r\epsilon_0\mathbf{E}$ \\[4pt]
+		$\psi = \int\mathbf{D}\cdot d\mathbf{S} $ \\
+	}
+	
+	\subsubsection*{Gauss's Law}
+	{ \addtolength{\leftskip}{0.5in}
+		$\oint\mathbf{D}\cdot d\mathbf{S} = Q_{enc} = \int\rho_v dV$ \\[4pt]
+		$\rho_v = \nabla\cdot\mathbf{D}$ \\
+	}
+	
+	\vfill\null	
+	\columnbreak
+	
+	\subsection*{Voltage}
+	{ \addtolength{\leftskip}{0.5in}
+		$V_{ba} = -\int_a^b\mathbf{E}\cdot d\mathbf{L} = V_a - V_b $ \\[4pt]
+		$V = \int\dfrac{dQ}{4\pi\epsilon r} $ \\[4pt]
+		$\mathbf{E} = -\nabla V $ \\
+	}
+	
+	\subsection*{Current}
+	{ \addtolength{\leftskip}{0.5in}
+		$ I = \int\mathbf{J}\cdot d\mathbf{S} $ \\
+	}
+	
+	\subsection*{Resistance}
+	\subsubsection*{Ohm's Law}
+	{ \addtolength{\leftskip}{0.5in}
+		$\mathbf{J} = \sigma\mathbf{E} $ \\[4pt]
+		$R = \dfrac{-\int\mathbf{E}\cdot d\mathbf{L}}{\int\sigma\mathbf{E}\cdot d\mathbf{S}} $ \\[4pt]
+		$P = \int\mathbf{E}\cdot\mathbf{J}dV $ \\
+	}
+	
+
+	
+	\subsection*{Boundary Conditions}
+	\subsubsection*{Dielectric-Dielectric}
+	{ \addtolength{\leftskip}{0.5in}
+		$\mathbf{E_{T1}} = \mathbf{E_{T2}} $ \\[4pt]
+		$\mathbf{a_{21}}\cdot(\mathbf{D_1}-\mathbf{D_2}) = \rho_s $ \\[4pt]
+		For $\rho_s = 0$:\quad$\mathbf{D_{N1}}=\mathbf{D_{N2}} $ \\
+	}
+	\subsubsection*{Dielectric-Conductor}
+	{ \addtolength{\leftskip}{0.5in}
+		$E_T = 0$ \\
+		$D_N = 0$ \\
+	}
+	
+	\subsection*{Capacitance}
+	{ \addtolength{\leftskip}{0.5in}
+		$\nabla^2V = \dfrac{-\rho_v}{\epsilon} $ \\[4pt]
+		For $\rho_v = 0$:\quad $\nabla^2V = 0$ \\[4pt]
+		$C = \dfrac{Q}{V} $ \\[4pt]
+		For parallel plate capacitors: $C = \dfrac{\epsilon S}{d}$ \\[4pt]
+		$\tau = RC = \frac{\epsilon}{\sigma}$\\[4pt]
+	}
+	
+	\subsection*{Work and Power}
+	
+	{ \addtolength{\leftskip}{0.5in}
+		$W = -Q\int_a^b \mathbf{E}\cdot d\mathbf{L} = QV_{ba} $ \\[4pt]
+		Electrostatic potential energy: $W_E =\frac{1}{2}CV^2$ \\[4pt]
+		$P = \iiint \mathbf{E} \cdot \mathbf{J} \, dV = \iiint \sigma E^2 dV$ = IV \\[4pt]
+	}
+	
+	\newpage
+	\huge
+	\textbf{Magnetostatics}
+	\normalsize
+	\vspace{0.2in}
+	\subsection*{Constants}
+	{ \addtolength{\leftskip}{0.5in}
+		$ \mu_0 = 4\pi \times 10^{-7}$ H/m \\[4pt]
+	}
+	
+	\subsection*{Magnetic Field Intensity}
+	\vspace{0.1in}
+	\subsubsection*{Law of Biot-Savart}
+		\vspace{0.1in}
+	{ \addtolength{\leftskip}{0.5in}
+		$\mathbf{H} = \bigints \dfrac{I d \mathbf{L} \times \mathbf{a}_R}{4\pi R^2}$ \\[8pt]
+		$\mathbf{H} = \bigints \dfrac{\mathbf{K}dS \times \mathbf{a}_R}{4\pi R^2}$ \\[8pt]
+		$\mathbf{H} = \bigints \dfrac{\mathbf{J}dV \times \mathbf{a}_R}{4\pi R^2}$ \\[8pt]
+	}
+	
+	\subsubsection*{Current Distributions}
+			\vspace{0.1in}
+	{ \addtolength{\leftskip}{0.5in}
+		Infinite line of current on Z-Axis:\quad $\mathbf{H}  =\dfrac{I \mathbf{a}_\phi}{2\pi \rho}$\\[4pt]
+		Center of a solenoid:\quad $\mathbf{H}  =\dfrac{NI \mathbf{a}_z}{h}$\\[4pt]
+		Infinite sheet of current:\quad $\mathbf{H}  =\frac{1}{2}\mathbf{K} \times \mathbf{a}_N$\\[4pt]
+	}
+	
+	\subsubsection*{Magnetic Flux Density}
+				\vspace{0.1in}
+	{ \addtolength{\leftskip}{0.5in}
+		$\mathbf{B} = \mu\mathbf{H} = \mu_r\mu_0\mathbf{E}$ \\[4pt]
+		$\phi = \int\mathbf{B}\cdot d\mathbf{S} $ \\
+	}
+			\vspace{0.1in}
+	
+	\subsubsection*{Ampere's Law}
+				\vspace{0.1in}
+	{ \addtolength{\leftskip}{0.5in}
+		$\oint\mathbf{H}\cdot d\mathbf{L} = I_{enc} = \iint \mathbf{J} \cdot d\mathbf{S}$ \\[4pt]
+		$\mathbf{J} = \nabla \times \mathbf{H}$ \\
+	}
+
+\vspace{0.5in}
+\huge
+\textbf{Dynamic Fields}
+\normalsize
+\vspace{0.2in}
+\subsection*{Continuity Equation}
+{ \addtolength{\leftskip}{0.5in}
+	$\nabla \cdot \mathbf{J} = -\frac{\partial \rho_v}{\partial t}$ \\[6pt]
+	$\rho_v = \rho_0 e^{-t/\tau}$ \\[6pt]
+	Relaxation time: 	$\tau = \frac{\epsilon}{\sigma}$ \\[6pt]
+}
+
+\normalsize
+\vspace{0.2in}
+\subsection*{Faraday's Law}
+{ \addtolength{\leftskip}{0.5in}
+	Integral form:	$\oint \mathbf{E} \cdot d\mathbf{L} = -\frac{\partial}{\partial t}\iint \mathbf{B}\cdot d\mathbf{S}$ \\[6pt]
+	Point form: $\nabla \times \mathbf{E} =-\frac{\partial \mathbf{B}}{\partial t}$ \\[6pt]
+	}
+
+
+	
+	
+\end{flushleft}
+\end{multicols}
+\end{document}
