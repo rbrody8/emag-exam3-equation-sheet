@@ -316,8 +316,8 @@
 	\subsubsection*{Magnetic Flux Density}
 				\vspace{0.1in}
 	{ \addtolength{\leftskip}{0.5in}
-		$\mathbf{B} = \mu\mathbf{H} = \mu_r\mu_0\mathbf{E}$ \\[4pt]
-		$\phi = \int\mathbf{B}\cdot d\mathbf{S} $ \\
+		$\mathbf{B} = \mu\mathbf{H} = \mu_r\mu_0\mathbf{H}$ \\[4pt]
+		$\phi = \int\mathbf{B}\cdot d\mathbf{S} $ \\ [4 pt]
 	}
 			\vspace{0.1in}
 	
@@ -325,10 +325,52 @@
 				\vspace{0.1in}
 	{ \addtolength{\leftskip}{0.5in}
 		$\oint\mathbf{H}\cdot d\mathbf{L} = I_{enc} = \iint \mathbf{J} \cdot d\mathbf{S}$ \\[4pt]
-		$\mathbf{J} = \nabla \times \mathbf{H}$ \\
+		$\mathbf{J} = \nabla \times \mathbf{H}$ \\ [4 pt]
 	}
 
-\vspace{0.5in}
+	\subsection*{Maxwell's Equations}
+	\vspace{0.1in}
+	{\addtolength{\leftskip}{0.5in}
+		\begin{tabular}{l l}
+			Integral Form & Point Form \\ [4 pt]
+			$\oint\mathbf{D}\cdot d\mathbf{S} = Q_{enc}$ & $\nabla\cdot\mathbf{D} = \rho_v$  \\[4 pt]
+			$\oint\mathbf{B}\cdot d\mathbf{S} = 0$ &  $\nabla\cdot\mathbf{B} = 0$ \\[4 pt]
+			$\oint\mathbf{E}\cdot d\mathbf{L} = 0$ &  $\nabla\times\mathbf{E} = 0$ \\[4 pt]
+			$\oint\mathbf{H}\cdot d\mathbf{L} = I_{enc}$ &  $\nabla\times\mathbf{H} = \mathbf{J}$ \\[4 pt]
+		\end{tabular}
+	}
+
+	\subsection*{Force and Torque}
+	\vspace{0.1in}
+	{\addtolength{\leftskip}{0.5in}
+		$ \mathbf{F} = q(\mathbf{E}+\mathbf{u}\times\mathbf{B}) $ \\ [4 pt]
+		$ \mathbf{F_{12}} = \int I_2d\mathbf{L_2}\times\mathbf{B_1} $ \\[4 pt]
+		$ \mathbf{m} = NIS\mathbf{a_N} $ \\[4 pt]
+		$ \mathbf{\tau} = \mathbf{m}\times\mathbf{B} $ \\[4 pt]
+	}
+
+	\subsection*{Boundary Conditions}\vspace{0.1in}
+	{ \addtolength{\leftskip}{0.5in}
+		$ \mathbf{B_{N1}} = \mathbf{B_{N2}} $ \\[4 pt]
+		$ \mathbf{a_{21}}\times(\mathbf{H_1-H_2}) = \mathbf{K} $ \\[4 pt]
+	}
+
+	\subsection*{Inductance} \vspace{0.1in}
+	{ \addtolength{\leftskip}{0.5in}
+		General: \quad$ L = \dfrac{\lambda}{I} = \dfrac{N\phi_tot}{I}$  \\[4 pt]
+		Wire Wrapped around Core: \quad$\dfrac{\mu N^2\pi a^2}{h} $ \\[4 pt]
+		Coaxial Cable: \quad$\dfrac{L}{h} = \dfrac{\mu}{2\pi}\ln\dfrac{b}{a} $ \\ [4 pt]
+		Mutual Inductance: \\ [4 pt]
+		\quad$M_{12} = \dfrac{\lambda_{12}}{I_1} = \dfrac{N_2}{I_1}\int\mathbf{B_1}\cdot d\mathbf{S_2} $ \\ [4 pt]
+	}
+
+	\subsection*{Work}\vspace{0.1in}
+	{ \addtolength{\leftskip}{0.5in}
+		$W_M = \dfrac{1}{2}LI^2 = \dfrac{1}{2}\int\mathbf{B}\cdot\mathbf{H}dv$ \\ 
+	}
+	
+
+\newpage
 \huge
 \textbf{Dynamic Fields}
 \normalsize
