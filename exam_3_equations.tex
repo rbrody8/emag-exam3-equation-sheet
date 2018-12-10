@@ -328,7 +328,7 @@
 		$\mathbf{J} = \nabla \times \mathbf{H}$ \\ [4 pt]
 	}
 
-	\subsection*{Maxwell's Equations}
+	\subsection*{Maxwell's Equations (static)}
 	\vspace{0.1in}
 	{\addtolength{\leftskip}{0.5in}
 		\begin{tabular}{l l}
@@ -339,6 +339,8 @@
 			$\oint\mathbf{H}\cdot d\mathbf{L} = I_{enc}$ &  $\nabla\times\mathbf{H} = \mathbf{J}$ \\[4 pt]
 		\end{tabular}
 	}
+
+\columnbreak
 
 	\subsection*{Force and Torque}
 	\vspace{0.1in}
@@ -384,13 +386,43 @@
 
 \normalsize
 \vspace{0.2in}
+\subsection*{Wave Equation}
+{\addtolength{\leftskip}{0.5in}
+	$\mathbf{E}(z,t)=E_oe^{-\alpha z}cos(\omega t-\beta z+\phi)\mathbf{a_x} $ \\
+}
+
+\normalsize
+\vspace{0.2in}
 \subsection*{Faraday's Law}
 { \addtolength{\leftskip}{0.5in}
-	Integral form:	$\oint \mathbf{E} \cdot d\mathbf{L} = -\frac{\partial}{\partial t}\iint \mathbf{B}\cdot d\mathbf{S}$ \\[6pt]
-	Point form: $\nabla \times \mathbf{E} =-\frac{\partial \mathbf{B}}{\partial t}$ \\[6pt]
-	}
+	Integral form: \\
+	\quad$V_{emf}=\oint \mathbf{E} \cdot d\mathbf{L} = -\frac{\partial}{\partial t}\iint \mathbf{B}\cdot d\mathbf{S}$ \\[6pt]
+	Point form:\\
+	\quad $\nabla \times \mathbf{E} =-\frac{\partial \mathbf{B}}{\partial t}$ \\[12pt]
+	$V_{emf} = \oint(\mathbf{u}\times\mathbf{B})\cdot d\mathbf{L} $ \\
+}
 
+\normalsize
+\vspace{0.2in}
+\subsection*{Displacement Current Density}
+{ \addtolength{\leftskip}{0.5in}
+	$\mathbf{J_d} = \frac{\partial\mathbf{D}}{\partial t} $ \\
+}
 
+\hfill \vfil	
+\columnbreak
+\normalsize
+\vspace{0.2in}
+\subsection*{Maxwell's Equations (dynamic)}
+{
+	\begin{tabular}{l l}
+		Integral Form & Point Form \\ [4 pt]
+		$\oint\mathbf{D}\cdot d\mathbf{S} = Q_{enc}$ & $\nabla\cdot\mathbf{D} = \rho_v$  \\[4 pt]
+		$\oint\mathbf{B}\cdot d\mathbf{S} = 0$ &  $\nabla\cdot\mathbf{B} = 0$ \\[4 pt]
+		$\oint\mathbf{E}\cdot d\mathbf{L} = -\frac{\partial}{\partial t}\iint \mathbf{B}\cdot d\mathbf{S}$ &  $\nabla\times\mathbf{E} = -\frac{\partial\mathbf{B}}{\partial t}$ \\[4 pt]
+		$\oint\mathbf{H}\cdot d\mathbf{L} = \int\mathbf{J}\cdot d\mathbf{S} + \frac{\partial}{\partial t}\int\mathbf{D}\cdot d\mathbf{S}$ &  $\nabla\times\mathbf{H} = \mathbf{J_c}+\frac{\partial\mathbf{D}}{\partial t} $ \\[4 pt]
+	\end{tabular}
+}
 	
 	
 \end{flushleft}
